@@ -1,4 +1,4 @@
-""" Feasibility constraints """
+"""Feasibility constraints"""
 
 from collections import Counter
 from functools import partial

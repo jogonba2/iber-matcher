@@ -1,5 +1,0 @@
-sentence-transformers
-typer
-typing_extensions
-pandas
-openpyxl

@@ -23,6 +23,7 @@ class Reviewer:
         self.embeddings = get_encoder("all-mpnet-base-v2").encode(
             list(self.categories)
         )
+        self.full_name = " ".join(self.full_name.split("-")).strip()
 
 
 @dataclass
@@ -39,6 +40,9 @@ class Paper:
     def __post_init__(self):
         self.embedding = get_encoder("all-mpnet-base-v2").encode(
             f"{self.title}\n{self.abstract}"
+        )
+        self.authors = set(
+            " ".join(author.split("-")).strip() for author in self.authors
         )
 
 
